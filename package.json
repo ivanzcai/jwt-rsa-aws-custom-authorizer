@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "lambda-local --timeout 300 --lambda-path index.js --event-path event.json",
-    "bundle": "rm -f custom-authorizer.zip ; zip custom-authorizer.zip -r *.js *.json node_modules/"
+    "bundlewindows": " 7z a -tzip custom-authorizer.zip @windows7zipList.txt",
+    "bundlelinux": "rm -f custom-authorizer.zip ; zip custom-authorizer.zip -r *.js *.json node_modules/"
   },
   "author": "Jason Haines",
   "license": "Apache-2.0",
